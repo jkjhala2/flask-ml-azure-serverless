@@ -67,14 +67,16 @@ def predict():
     """
 
     try:
+        
         clf = joblib.load("boston_housing_prediction.joblib")
     except Exception as e:
+        
         LOG.error("Error loading model: %s", str(e))
         LOG.error("Exception traceback: %s", traceback.format_exc())
         return "Model not loaded 4"
 
     json_payload = request.json
-    LOG.info("JSON payload: %s json_payload")
+    LOG.info("JSON payload: %s ",json_payload)
     inference_payload = pd.DataFrame(json_payload)
     LOG.info("inference payload DataFrame: %s inference_payload")
     scaled_payload = scale(inference_payload)
