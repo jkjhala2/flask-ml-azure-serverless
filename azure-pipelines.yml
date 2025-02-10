@@ -89,6 +89,6 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Deploy Azure Web App : flask-ml-service'
             inputs:
-              azureSubscription: $(azureServiceConnectionId)
+              azureSubscription: 'Flask ML Aap Service'
               appName: $(webAppName)
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
