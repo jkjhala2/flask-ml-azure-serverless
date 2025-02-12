@@ -24,7 +24,7 @@ def scale(payload):
 @app.route("/")
 def home():
     html = (
-        "<h3>Sklearn Prediction Home: From Azure Pipelines (Continuous Delivery 3)</h3>"
+        "<h3>Sklearn Prediction Home: From Azure Pipelines (Continuous Delivery 4)</h3>"
     )
     return html.format(format)
 
@@ -65,7 +65,7 @@ def predict():
     except Exception as e:
         LOG.error("Error loading model: %s", str(e))
         LOG.error("Exception traceback: %s", traceback.format_exc())
-        return "Model not loaded"
+        return "Model not loaded 4"
 
     json_payload = request.json
     LOG.info("JSON payload: %s json_payload")
