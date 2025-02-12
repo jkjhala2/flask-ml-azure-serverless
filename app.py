@@ -1,3 +1,9 @@
+import numpy as np
+np.float =float
+np.bool =bool
+np.int =int
+np.object =object
+
 from flask import Flask, request, jsonify
 from flask.logging import create_logger
 import logging
